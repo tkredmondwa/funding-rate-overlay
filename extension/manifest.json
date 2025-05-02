@@ -1,0 +1,16 @@
+
+{
+  "manifest_version": 3,
+  "name": "Funding Rate Overlay",
+  "version": "0.2",
+  "description": "Display live funding rate on TradingView charts.",
+  "permissions": ["scripting", "activeTab", "storage"],
+  "host_permissions": ["*://*.tradingview.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["*://*.tradingview.com/chart/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
